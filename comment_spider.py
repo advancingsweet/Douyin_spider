@@ -61,6 +61,7 @@ if __name__ == '__main__':
     db.connenct(configs)
 
     video_id_list = db.find_today_video()
+
     for video_id in video_id_list:
         comment_api = 'https://jokeai.zongcaihao.com/douyin/v292/comment/list?aweme_id={}&cursor=0'.format(
             video_id['video_id'])
